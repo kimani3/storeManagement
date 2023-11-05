@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<form action="/edit_product_name_resp" method="post" >
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter product name to be edited </label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+    <div id="namehelp" class="form-text">Please enter the exact same spelling to avoid errors.</div>
+
+  </div>
+       <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enter new name for the product.</label>
+    <input type="text"  placeholder="Numeric value only" class="form-control" id="new_name" name="new_name">
+  </div>
+
+
+  <button type="submit" onclick="notify()" class="btn btn-primary">Submit</button>
+</form>
+
+<center><h3>{{ error }}</h3></center>
+
+
+
+<script>
+function notify() {
+  alert("Product edited!");
+}
+</script>
+
+{% endblock %}

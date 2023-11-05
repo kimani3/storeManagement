@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<form action="/delete_product_resp" method="post" >
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Product Name: </label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+    <div id="namehelp" class="form-text">Please enter the exact same spelling to avoid errors.</div>
+  </div>
+  <button type="submit" onclick="notify()" class="btn btn-primary">Submit</button>
+</form>
+
+<center><h3>{{ error }}</h3></center>
+
+
+
+<script>
+function notify() {
+  alert("Product deleted!");
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<form action="/add_bag_resp" method="post" >
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Product Name: </label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+    <div id="namehelp" class="form-text">Note: For inventory only numbers are allowed[Values must be in kg for bulk category]</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Inventory</label>
+    <input type="number"  placeholder="Numeric value only" class="form-control" id="inventory" name="inventory">
+  </div>
+  <button type="submit" onclick="notify()" class="btn btn-primary">Submit</button>
+</form>
+
+<center><h3>{{ error }}</h3></center>
+
+
+
+<script>
+function notify() {
+  alert("New bag added to the system!");
+}
+</script>
+
+{% endblock %}
