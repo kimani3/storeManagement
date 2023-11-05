@@ -10,6 +10,7 @@ To run the project, you will need to follow these steps:
 **Username:** admin
 **Password:** admin
 **Usage**
+
 Once you have logged in, you can perform the following actions:
 
 **Create a product in stock**: Click on the “Create Product” button and fill in the required details.
